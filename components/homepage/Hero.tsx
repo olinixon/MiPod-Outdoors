@@ -36,8 +36,8 @@ export function Hero() {
             <Button href="/the-mi-pod" size="lg">
               Shop the Mi-Pod
             </Button>
-            <Button variant="secondary-light" size="lg" href="/about">
-              <span>Our story</span>
+            <Button variant="secondary-light" size="lg" href="/the-film">
+              <span>Watch the film</span>
               <ArrowRight size={16} />
             </Button>
           </div>
