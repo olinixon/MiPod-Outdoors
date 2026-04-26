@@ -36,7 +36,7 @@ export const MI_POD_PRODUCT: Product = {
   currency: "NZD",
   trustLine: "Free shipping NZ-wide · 3-year warranty · Afterpay available",
   description:
-    "A hard-shell rooftop tent that lifts itself. Sleeps 2–3 adults, fits any vehicle, deploys in 90 seconds. Designed in New Zealand, built for everywhere a back road can take you.",
+    "A hard-shell rooftop tent that lifts itself. Sleeps 2–3 adults, fits any vehicle, deploys in 90 seconds. Designed and built for everywhere a back road can take you.",
   features: [
     "Hydraulic auto-lift — deploys in 90 seconds",
     "Sleeps 2–3 adults",
