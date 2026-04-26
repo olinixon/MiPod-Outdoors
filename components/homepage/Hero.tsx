@@ -5,18 +5,18 @@ import { Button } from "@/components/ui/Button"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-charcoal-900">
-      {/* LIFESTYLE PLACEHOLDER: Hero background — ute with rooftop tent deployed at golden hour, mountain landscape, New Zealand. To be replaced post-Nelson shoot. */}
+      {/* LIFESTYLE PLACEHOLDER: Tacoma + tent at clifftop golden hour. To be replaced post-Nelson shoot. */}
       <Image
-        src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=2560&q=85"
-        alt="A 4WD vehicle with a rooftop tent deployed at golden hour in a rugged mountain landscape"
+        src="/images/lifestyle/hero-tacoma-clifftop.jpg"
+        alt="A Toyota Tacoma with a Mi-Pod rooftop tent deployed on a grassy clifftop, two people seated in camp chairs with a mountain range behind them."
         fill
-        className="object-cover opacity-50"
+        className="object-cover object-[center_35%]"
         priority
         sizes="100vw"
       />
 
       {/* Gradient overlay — bottom fade for copy legibility */}
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900 via-charcoal-900/50 to-charcoal-900/20" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8 pt-24 pb-20">
