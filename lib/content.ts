@@ -26,13 +26,49 @@ export const VALUE_PROPS = [
 ] as const
 
 export const SPEC_FEATURES = [
-  { id: "hydraulic", icon: "Zap", label: "Hydraulic auto-lift mechanism" },
-  { id: "sleeps", icon: "Moon", label: "Sleeps 2–3 adults comfortably" },
-  { id: "setup", icon: "Timer", label: "90-second setup" },
-  { id: "waterproof", icon: "Droplets", label: "3000mm waterproof rating" },
-  { id: "frame", icon: "Grid2x2", label: "Aluminium alloy frame" },
-  { id: "mattress", icon: "Layers", label: "7cm high-density mattress, washable cover" },
-] as const
+  {
+    id: "hydraulic",
+    num: "01",
+    icon: "Zap",
+    title: "Hydraulic Auto-Lift",
+    description: "Semi-automatic deployment. Release the latch, the tent rises on its own.",
+  },
+  {
+    id: "sleeps",
+    num: "02",
+    icon: "Moon",
+    title: "Sleeps 2–3",
+    description: "215 × 128 cm interior. Two adults, plus a kid or a dog.",
+  },
+  {
+    id: "setup",
+    num: "03",
+    icon: "Timer",
+    title: "90-Second Setup",
+    description: "From locked to ready-to-sleep in under two minutes.",
+  },
+  {
+    id: "waterproof",
+    num: "04",
+    icon: "Droplets",
+    title: "3000mm Waterproof",
+    description: "420D Oxford with PU coating. Wind and UV resistant.",
+  },
+  {
+    id: "frame",
+    num: "05",
+    icon: "Grid2x2",
+    title: "Aluminium Frame",
+    description: "Marine-grade alloy. 300kg loading capacity.",
+  },
+  {
+    id: "mattress",
+    num: "06",
+    icon: "Layers",
+    title: "7cm Mattress",
+    description: "30D high-density sponge. Washable cover.",
+  },
+]
 
 export const TESTIMONIALS = [
   {
