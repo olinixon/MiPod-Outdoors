@@ -66,7 +66,7 @@ export const TESTIMONIALS = [
 
 export const STORY_BODY = [
   "Mi-Pod was born for Kiwis who want their weekends back. Hydraulic auto-lift means no fighting with poles, no fumbling in the dark. Just pull up, hit the latch, and the tent does the rest.",
-  "Designed in New Zealand for New Zealand conditions. 3000mm waterproof. Wind and UV resistant. Built to handle a season of back-country and still feel like home.",
+  "Designed for New Zealand conditions. Waterproof, wind and UV resistant. Built to handle a season of back-country and still feel like home.",
 ] as const
 
 export const NAV_LINKS = [
