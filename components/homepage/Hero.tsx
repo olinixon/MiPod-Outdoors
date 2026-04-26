@@ -24,7 +24,7 @@ export function Hero() {
           <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-orange mb-6 font-sans">
             — New Zealand's rooftop tent
           </p>
-          <h1 className="font-display font-bold text-white leading-[0.92] tracking-tight text-[64px] md:text-[96px] lg:text-[120px]">
+          <h1 className="font-display font-bold text-white leading-[0.92] tracking-tight text-[64px] md:text-[96px] lg:text-[120px] uppercase">
             Live above
             <br />
             the ground.
