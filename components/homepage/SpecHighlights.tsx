@@ -9,18 +9,16 @@ export function SpecHighlights() {
     <section id="whats-inside" className="py-24 md:py-32 bg-charcoal-900 scroll-mt-20">
       <Container>
 
-        {/* Header: eyebrow + headline left, sub-headline right */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-16 items-end mb-16">
-          <div>
-            <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-orange mb-4 font-sans">
-              — What&apos;s inside
-            </p>
-            <h2 className="font-display font-bold text-white leading-[0.95] tracking-tight text-[40px] md:text-[56px] lg:text-[64px] whitespace-nowrap">
-              Built to a standard,{" "}
-              <span className="block md:inline">not a price.</span>
-            </h2>
-          </div>
-          <p className="text-white/60 font-sans text-[17px] leading-relaxed md:pb-1">
+        {/* Header: eyebrow, headline, sub-headline stacked */}
+        <div className="mb-16">
+          <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-orange mb-4 font-sans">
+            — What&apos;s inside
+          </p>
+          <h2 className="font-display font-bold text-white leading-[0.95] tracking-tight text-[40px] md:text-[56px] lg:text-[64px] whitespace-nowrap mb-6">
+            Built to a standard,{" "}
+            <span className="block md:inline">not a price.</span>
+          </h2>
+          <p className="text-white/70 font-sans text-[17px] leading-relaxed max-w-[720px]">
             Six things that make a tent feel like a small house on your roof. The boring details
             that decide whether a sleepless 3am storm becomes a story or a refund.
           </p>
