@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
@@ -9,6 +10,9 @@ import { NAV_LINKS } from "@/lib/content"
 import { Button } from "@/components/ui/Button"
 
 export function Header() {
+  const pathname = usePathname()
+  const isHomepage = pathname === "/"
+
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -28,16 +32,16 @@ export function Header() {
     return () => window.removeEventListener("resize", handler)
   }, [])
 
-  const isLight = !scrolled && !mobileOpen
+  // On homepage: transparent until scrolled. On all other pages: always solid.
+  const isSolid = !isHomepage || scrolled || mobileOpen
+  const isLight = !isSolid
 
   return (
     <>
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-40 transition-all duration-300",
-          scrolled || mobileOpen
-            ? "bg-white shadow-sm"
-            : "bg-transparent"
+          isSolid ? "bg-white shadow-sm" : "bg-transparent"
         )}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
