@@ -1,31 +1,45 @@
+import Image from "next/image"
 import { Container } from "@/components/ui/Container"
 
 export function Overview() {
   return (
     <section id="overview" className="py-16 md:py-24 bg-white scroll-mt-24">
       <Container>
-        <div className="max-w-2xl">
-          <h2 className="font-display font-bold text-charcoal text-[36px] md:text-[48px] leading-tight tracking-tight mb-8">
-            A tent that does the work for you.
-          </h2>
-          <div className="space-y-6 text-charcoal-600 font-sans leading-relaxed text-[17px]">
-            <p>
-              Most rooftop tents are a wrestling match. Poles, springs, awnings flapping in the
-              wind, the whole campsite watching while you figure it out. The Mi-Pod is different.
-              Hit the latches and the hydraulic mechanism lifts the tent for you. From folded to
-              ready-to-sleep in under 90 seconds.
-            </p>
-            <p>
-              Inside, a 7cm high-density mattress with a washable cover. Mesh windows on every
-              side for cross-flow on hot nights. A skylight overhead for stargazing. LED strip
-              lighting on a soft warm tone, controlled from inside the tent.
-            </p>
-            <p>
-              Outside, a 420D Oxford fabric shell with PU coating, rated to 3000mm waterproof. UV
-              resistant. Wind tested. Aluminium alloy frame that&apos;s lightweight enough for the
-              smallest roof rack and tough enough to take what New Zealand throws at it.
-            </p>
-          </div>
+        <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-orange mb-4 font-sans">
+          — Overview
+        </p>
+        <h2 className="font-display font-bold text-charcoal leading-[0.95] tracking-tight text-[40px] md:text-[56px] lg:text-[64px] mb-8">
+          A small house on your roof.
+        </h2>
+
+        <p className="text-charcoal-600 font-sans text-[17px] leading-relaxed max-w-[720px] mb-12">
+          The Mi-Pod is built on one idea — a tent shouldn&apos;t be a fight. Hydraulic
+          semi-automatic lift means deployment is one motion: release the latch, the tent does the
+          rest.
+        </p>
+
+        {/* LIFESTYLE PLACEHOLDER: Mi-Pod overview section image — reusing existing asset, swap later */}
+        <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden mb-12">
+          <Image
+            src="/images/lifestyle/hero-river-mountains.jpg"
+            alt="A vehicle with a rooftop tent deployed in a cinematic New Zealand landscape"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+          />
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <p className="text-charcoal-600 font-sans text-[17px] leading-relaxed">
+            The shell is 420D Oxford with a polyurethane coating, rated to 3000mm waterproof. Wind
+            and UV resistant. Marine-grade aluminium alloy frame, with a 300kg loading capacity that
+            comfortably absorbs two adults plus gear. Comes with a 2.7m retractable aluminium
+            ladder, factory installation bags, and integrated LED light strips. Universal mount fits
+            any vehicle with a roof rack rated to 75kg dynamic load.
+          </p>
+          <p className="text-charcoal-600 font-sans text-[17px] leading-relaxed">
+            Designed and built to handle the life of back-country and still feel like home.
+          </p>
         </div>
       </Container>
     </section>
