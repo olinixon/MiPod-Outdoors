@@ -25,12 +25,10 @@ export function Hero() {
             — New Zealand's rooftop tent
           </p>
           <h1 className="font-display font-bold text-white leading-[0.92] tracking-tight text-[64px] md:text-[96px] lg:text-[120px] uppercase">
-            Live above
-            <br />
-            the ground.
+            The world is yours.
           </h1>
           <p className="mt-8 text-lg md:text-xl text-white/80 font-sans leading-relaxed max-w-xl">
-            Where the road goes, you go.
+            The best views don't have addresses.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button href="/the-mi-pod" size="lg">
