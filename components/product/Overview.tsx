@@ -38,7 +38,9 @@ export function Overview() {
             any vehicle with a roof rack rated to 75kg dynamic load.
           </p>
           <p className="text-charcoal-600 font-sans text-[17px] leading-relaxed">
-            Designed and built to handle the life of back-country and still feel like home.
+            Heavy-duty Oxford shell, marine-grade alloy frame. Waterproof to 3000mm, wind and UV
+            resistant — built to handle whatever the country throws at it. Fits any roof rack rated
+            to 75kg. Comes with the 2.7m ladder, install bags, and LED strips, ready to go.
           </p>
         </div>
       </Container>
