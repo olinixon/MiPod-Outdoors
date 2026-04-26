@@ -3,15 +3,15 @@ import Image from "next/image"
 export function LifestyleQuote() {
   return (
     <section className="relative py-32 md:py-48 overflow-hidden bg-charcoal-900">
-      {/* LIFESTYLE PLACEHOLDER: Full-bleed quote section — ute parked at night, tent deployed, stars visible. To be replaced post-Nelson shoot. */}
+      {/* LIFESTYLE PLACEHOLDER: Lifestyle quote background — reusing existing asset, swap later */}
       <Image
-        src="https://images.unsplash.com/photo-1516569423027-8a77ec5e04d8?w=2560&q=85"
-        alt="Rooftop tent deployed under a clear night sky"
+        src="/images/lifestyle/hero-tacoma-clifftop.jpg"
+        alt="Vehicle with rooftop tent at a dramatic landscape location"
         fill
-        className="object-cover opacity-40"
+        className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/80 to-transparent" />
+      <div className="absolute inset-0 bg-charcoal-900/60" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <blockquote>
