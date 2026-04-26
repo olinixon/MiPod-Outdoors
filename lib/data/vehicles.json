@@ -1,0 +1,45 @@
+{
+  "_comment": "PLACEHOLDER DATA. The user is providing the full NZ vehicle compatibility list. Replace these 5 example entries with the user's full list when received. Don't add additional vehicles until then.",
+  "vehicles": [
+    {
+      "make": "Toyota",
+      "model": "Hilux",
+      "yearStart": 2020,
+      "yearEnd": 2026,
+      "status": "recommended",
+      "notes": "Requires Rhino-Rack RLT600 crossbars"
+    },
+    {
+      "make": "Toyota",
+      "model": "Land Cruiser",
+      "yearStart": 2010,
+      "yearEnd": 2026,
+      "status": "direct-fit",
+      "notes": "Direct fit. No additional hardware."
+    },
+    {
+      "make": "Ford",
+      "model": "Ranger",
+      "yearStart": 2018,
+      "yearEnd": 2026,
+      "status": "recommended",
+      "notes": "Requires compatible crossbar system rated to 75kg dynamic load"
+    },
+    {
+      "make": "Nissan",
+      "model": "Patrol",
+      "yearStart": 2012,
+      "yearEnd": 2026,
+      "status": "direct-fit",
+      "notes": "Direct fit. No additional hardware."
+    },
+    {
+      "make": "Subaru",
+      "model": "Outback",
+      "yearStart": 2015,
+      "yearEnd": 2026,
+      "status": "recommended",
+      "notes": "Requires aftermarket crossbars rated to 75kg dynamic load"
+    }
+  ]
+}
