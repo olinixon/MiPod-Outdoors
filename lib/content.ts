@@ -65,7 +65,7 @@ export const SPEC_FEATURES = [
     id: "mattress",
     num: "06",
     icon: "Layers",
-    title: "7cm Mattress",
+    title: "70mm Mattress",
     description: "30D high-density sponge. Washable cover.",
   },
 ]
