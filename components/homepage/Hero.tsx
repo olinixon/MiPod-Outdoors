@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/Button"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-charcoal-900">
-      {/* LIFESTYLE PLACEHOLDER: Pickup with rooftop tent at dusk by river, mountains behind. To be replaced post-Nelson shoot. */}
+      {/* LIFESTYLE PLACEHOLDER: Tacoma on clifftop with deployed rooftop tent, cinematic landscape. To be replaced post-Nelson shoot. */}
       <Image
-        src="/images/lifestyle/hero-river-mountains.jpg"
-        alt="A white pickup truck parked on a riverbank with a rooftop tent deployed on top, a campfire glowing nearby, and a wide snow-capped mountain range at dusk."
+        src="/images/lifestyle/hero-tacoma-clifftop.jpg"
+        alt="A black Toyota Tacoma parked on a clifftop with a rooftop tent deployed, overlooking a vast wilderness landscape."
         fill
-        className="object-cover object-[25%_65%]"
+        className="object-cover object-center"
         priority
         sizes="100vw"
       />
