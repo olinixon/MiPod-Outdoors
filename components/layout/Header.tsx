@@ -47,10 +47,10 @@ export function Header() {
               <Image
                 src="/images/brand/logo-horizontal.png"
                 alt="Mi-Pod Outdoors"
-                width={160}
-                height={40}
+                width={200}
+                height={55}
                 className={cn(
-                  "h-8 w-auto object-contain transition-all duration-300",
+                  "h-10 md:h-12 w-auto object-contain transition-all duration-300",
                   isLight ? "brightness-0 invert" : "brightness-0"
                 )}
                 priority

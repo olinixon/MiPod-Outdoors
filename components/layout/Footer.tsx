@@ -15,9 +15,9 @@ export function Footer() {
               <Image
                 src="/images/brand/logo-stacked.png"
                 alt="Mi-Pod Outdoors"
-                width={120}
-                height={96}
-                className="h-20 w-auto object-contain brightness-0 invert mb-4"
+                width={140}
+                height={110}
+                className="h-24 w-auto object-contain brightness-0 invert mb-4"
               />
             </Link>
             <p className="text-sm text-white/60 font-sans leading-relaxed">
