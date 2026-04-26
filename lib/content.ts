@@ -2,8 +2,8 @@ export const VALUE_PROPS = [
   {
     id: "nz-designed",
     icon: "MapPin",
-    title: "NZ Designed",
-    body: "Engineered in Aotearoa for Aotearoa conditions",
+    title: "NZ Engineered",
+    body: "Built to handle the conditions NZ throws at it",
   },
   {
     id: "hydraulic-lift",
