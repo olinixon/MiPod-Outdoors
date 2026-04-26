@@ -2,6 +2,7 @@ import { Container } from "@/components/ui/Container"
 import { PageHero } from "@/components/shared/PageHero"
 import { ComingSoonCard } from "@/components/shared/ComingSoonCard"
 import { EmailCapture } from "@/components/shared/EmailCapture"
+import { FadeIn } from "@/components/ui/FadeIn"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata = buildMetadata({
@@ -37,26 +38,30 @@ export default function AdventuresPage() {
       />
 
       {/* Email capture */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <Container>
-          <EmailCapture source="adventures" successMessage="You're on the list. First story incoming." />
-        </Container>
-      </section>
+      <FadeIn>
+        <section className="bg-white py-16 border-b border-gray-100">
+          <Container>
+            <EmailCapture source="adventures" successMessage="You're on the list. First story incoming." />
+          </Container>
+        </section>
+      </FadeIn>
 
       {/* Coming soon cards */}
-      <section className="py-16 md:py-24 bg-white">
-        <Container>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PLACEHOLDER_STORIES.map((story) => (
-              <ComingSoonCard
-                key={story.title}
-                title={story.title}
-                description={story.description}
-              />
-            ))}
-          </div>
-        </Container>
-      </section>
+      <FadeIn>
+        <section className="py-16 md:py-24 bg-white">
+          <Container>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {PLACEHOLDER_STORIES.map((story) => (
+                <ComingSoonCard
+                  key={story.title}
+                  title={story.title}
+                  description={story.description}
+                />
+              ))}
+            </div>
+          </Container>
+        </section>
+      </FadeIn>
     </>
   )
 }

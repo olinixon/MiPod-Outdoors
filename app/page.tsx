@@ -7,6 +7,7 @@ import { FeaturedProduct } from "@/components/homepage/FeaturedProduct"
 import { SpecHighlights } from "@/components/homepage/SpecHighlights"
 import { SocialProof } from "@/components/homepage/SocialProof"
 import { Newsletter } from "@/components/homepage/Newsletter"
+import { FadeIn } from "@/components/ui/FadeIn"
 
 export const metadata: Metadata = buildMetadata({
   title: "Mi-Pod Outdoors — Live Above the Ground",
@@ -19,12 +20,12 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ValueProps />
-      <StorySection />
-      <FeaturedProduct />
-      <SpecHighlights />
-      <SocialProof />
-      <Newsletter />
+      <FadeIn><ValueProps /></FadeIn>
+      <FadeIn><StorySection /></FadeIn>
+      <FadeIn><FeaturedProduct /></FadeIn>
+      <FadeIn><SpecHighlights /></FadeIn>
+      <FadeIn><SocialProof /></FadeIn>
+      <FadeIn><Newsletter /></FadeIn>
     </>
   )
 }

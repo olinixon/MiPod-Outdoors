@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container"
 import { PageHero } from "@/components/shared/PageHero"
 import { TextImageBlock } from "@/components/shared/TextImageBlock"
 import { Button } from "@/components/ui/Button"
+import { FadeIn } from "@/components/ui/FadeIn"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata = buildMetadata({
@@ -59,7 +60,9 @@ export default function AboutPage() {
       <section className="bg-white">
         <Container>
           {STORY_SECTIONS.map((section) => (
-            <TextImageBlock key={section.headline} {...section} />
+            <FadeIn key={section.headline}>
+              <TextImageBlock {...section} />
+            </FadeIn>
           ))}
         </Container>
       </section>

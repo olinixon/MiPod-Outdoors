@@ -2,6 +2,7 @@ import Script from "next/script"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { Container } from "@/components/ui/Container"
+import { FadeIn } from "@/components/ui/FadeIn"
 import { ImageGallery } from "@/components/product/ImageGallery"
 import { BuyBox } from "@/components/product/BuyBox"
 import { TabNav } from "@/components/product/TabNav"
@@ -82,25 +83,27 @@ export default function ProductPage() {
       <TabNav />
 
       {/* Content sections */}
-      <Overview />
-      <SpecsTable specs={product.specs} />
-      <WhatsIncluded />
-      <Compatibility />
+      <FadeIn><Overview /></FadeIn>
+      <FadeIn><SpecsTable specs={product.specs} /></FadeIn>
+      <FadeIn><WhatsIncluded /></FadeIn>
+      <FadeIn><Compatibility /></FadeIn>
 
       {/* FAQs */}
-      <section id="faqs" className="py-16 md:py-24 bg-cream scroll-mt-24">
-        <Container>
-          <h2 className="font-display font-bold text-charcoal text-[36px] md:text-[48px] leading-tight tracking-tight mb-10">
-            FAQs
-          </h2>
-          <div className="max-w-2xl">
-            <FAQs items={PRODUCT_FAQS} />
-          </div>
-        </Container>
-      </section>
+      <FadeIn>
+        <section id="faqs" className="py-16 md:py-24 bg-cream scroll-mt-24">
+          <Container>
+            <h2 className="font-display font-bold text-charcoal text-[36px] md:text-[48px] leading-tight tracking-tight mb-10">
+              FAQs
+            </h2>
+            <div className="max-w-2xl">
+              <FAQs items={PRODUCT_FAQS} />
+            </div>
+          </Container>
+        </section>
+      </FadeIn>
 
-      <LifestyleQuote />
-      <RelatedContent />
+      <FadeIn><LifestyleQuote /></FadeIn>
+      <FadeIn><RelatedContent /></FadeIn>
     </>
   )
 }
