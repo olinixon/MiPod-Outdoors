@@ -1,9 +1,15 @@
-"use client"
-
-import { useState, type FormEvent } from "react"
 import { Container } from "@/components/ui/Container"
 import { PageHero } from "@/components/shared/PageHero"
 import { ComingSoonCard } from "@/components/shared/ComingSoonCard"
+import { EmailCapture } from "@/components/shared/EmailCapture"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "Adventures — Field Journal",
+  description:
+    "Stories from the long way home. Routes, builds, and the people taking the Mi-Pod somewhere it shouldn't go.",
+  path: "/adventures",
+})
 
 const PLACEHOLDER_STORIES = [
   {
@@ -22,19 +28,6 @@ const PLACEHOLDER_STORIES = [
 ]
 
 export default function AdventuresPage() {
-  const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle")
-
-  async function handleSubmit(e: FormEvent) {
-    e.preventDefault()
-    if (!email) return
-    setStatus("loading")
-    console.log("[Adventures signup]", { email })
-    await new Promise((r) => setTimeout(r, 400))
-    setStatus("success")
-    setEmail("")
-  }
-
   return (
     <>
       <PageHero
@@ -46,37 +39,7 @@ export default function AdventuresPage() {
       {/* Email capture */}
       <section className="bg-white py-16 border-b border-gray-100">
         <Container>
-          <div className="max-w-md">
-            {status === "success" ? (
-              <div className="rounded-md bg-orange/10 border border-orange/20 px-6 py-5">
-                <p className="text-charcoal font-sans">
-                  You&apos;re on the list. First story incoming.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-                <label htmlFor="adventures-email" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  id="adventures-email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
-                  required
-                  className="flex-1 rounded-md border border-gray-200 px-4 py-3 text-charcoal placeholder:text-charcoal-600/40 font-sans text-sm focus:outline-none focus:border-orange transition-colors"
-                />
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="bg-orange text-white px-6 py-3 rounded-md font-medium uppercase tracking-wider text-sm hover:bg-orange-400 transition-all font-sans flex-shrink-0"
-                >
-                  {status === "loading" ? "Sending…" : "Notify me"}
-                </button>
-              </form>
-            )}
-          </div>
+          <EmailCapture source="adventures" successMessage="You're on the list. First story incoming." />
         </Container>
       </section>
 

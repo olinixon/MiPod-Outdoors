@@ -1,3 +1,4 @@
+import Script from "next/script"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { Container } from "@/components/ui/Container"
@@ -22,11 +23,38 @@ export const metadata = buildMetadata({
   path: "/the-mi-pod",
 })
 
+const productJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "The Mi-Pod",
+  description:
+    "A hydraulic auto-lift hard-shell rooftop tent. Sleeps 2–3 adults, deploys in 90 seconds, fits any vehicle with a standard roof rack.",
+  brand: { "@type": "Brand", name: "Mi-Pod Outdoors" },
+  offers: {
+    "@type": "Offer",
+    price: "4890",
+    priceCurrency: "NZD",
+    availability: "https://schema.org/PreOrder",
+    seller: { "@type": "Organization", name: "Mi-Pod Outdoors" },
+  },
+  image: "https://mipodoutdoors.com/images/product/mi-pod-render-1.png",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5",
+    reviewCount: "3",
+  },
+}
+
 export default function ProductPage() {
   const product = MI_POD_PRODUCT
 
   return (
     <>
+      <Script
+        id="product-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       {/* Breadcrumb */}
       <div className="pt-20 bg-white">
         <Container className="py-4">
