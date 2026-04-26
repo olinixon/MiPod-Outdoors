@@ -30,9 +30,7 @@ export function Hero() {
             the ground.
           </h1>
           <p className="mt-8 text-lg md:text-xl text-white/80 font-sans leading-relaxed max-w-xl">
-            A hydraulic auto-lift rooftop tent. NZ designed.
-            <br className="hidden md:block" />
-            Fits any vehicle.
+            Where the road goes, you go.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Button href="/the-mi-pod" size="lg">
