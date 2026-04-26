@@ -1,3 +1,6 @@
+"use client"
+
+import { Download } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import type { ProductSpec } from "@/lib/products"
 
@@ -7,24 +10,50 @@ interface SpecsTableProps {
 
 export function SpecsTable({ specs }: SpecsTableProps) {
   return (
-    <section id="specs" className="py-16 md:py-24 bg-white scroll-mt-24">
+    <section id="specs" className="py-16 md:py-24 bg-cream scroll-mt-24">
       <Container>
-        <h2 className="font-display font-bold text-charcoal text-[36px] md:text-[48px] leading-tight tracking-tight mb-10">
-          Specifications
-        </h2>
-        <div className="max-w-2xl">
-          <table className="w-full border-collapse">
-            <tbody>
-              {specs.map((spec, i) => (
-                <tr key={i} className="border-b border-gray-100">
-                  <td className="py-3.5 pr-8 text-sm font-medium text-charcoal font-sans w-1/2 align-top">
-                    {spec.label}
-                  </td>
-                  <td className="py-3.5 text-sm text-charcoal-600 font-sans">{spec.value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="grid md:grid-cols-[40%_1fr] gap-12 md:gap-16">
+
+          {/* Left column */}
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-orange mb-4 font-sans">
+              — Specifications
+            </p>
+            <h2 className="font-display font-bold text-charcoal leading-[0.95] tracking-tight text-[40px] md:text-[56px] mb-6">
+              The numbers.
+            </h2>
+            <p className="text-charcoal/70 font-sans text-[15px] leading-relaxed mb-8">
+              Independently tested by the wilderness of New Zealand. Full sheet available below.
+            </p>
+            <div>
+              <button
+                type="button"
+                className="inline-flex items-center gap-2 border border-orange text-orange px-6 py-3 rounded-md font-medium text-sm font-sans hover:bg-orange/5 transition-colors"
+              >
+                <Download size={15} strokeWidth={1.5} />
+                Download spec PDF
+              </button>
+              <p className="mt-2 text-xs text-charcoal/40 font-sans">(coming soon)</p>
+            </div>
+          </div>
+
+          {/* Right column — spec table */}
+          <div className="border-t border-charcoal/10">
+            {specs.map((spec, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-[40%_1fr] gap-4 py-4 border-b border-charcoal/10"
+              >
+                <span className="text-[11px] font-medium uppercase tracking-[0.15em] text-charcoal font-sans pt-0.5">
+                  {spec.label}
+                </span>
+                <span className="text-[15px] text-charcoal font-sans leading-snug">
+                  {spec.value}
+                </span>
+              </div>
+            ))}
+          </div>
+
         </div>
       </Container>
     </section>
