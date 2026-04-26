@@ -10,11 +10,10 @@ import { Overview } from "@/components/product/Overview"
 import { SpecsTable } from "@/components/product/SpecsTable"
 import { WhatsIncluded } from "@/components/product/WhatsIncluded"
 import { Compatibility } from "@/components/product/Compatibility"
-import { FAQs } from "@/components/product/FAQs"
 import { LifestyleQuote } from "@/components/product/LifestyleQuote"
+import { ProductFAQs } from "@/components/product/ProductFAQs"
 import { RelatedContent } from "@/components/product/RelatedContent"
 import { MI_POD_PRODUCT } from "@/lib/products"
-import { PRODUCT_FAQS } from "@/lib/content"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata = buildMetadata({
@@ -56,6 +55,7 @@ export default function ProductPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
+
       {/* Breadcrumb */}
       <div className="pt-20 bg-white">
         <Container className="py-4">
@@ -69,7 +69,7 @@ export default function ProductPage() {
         </Container>
       </div>
 
-      {/* Hero: gallery + buy box */}
+      {/* Hero: gallery + buy box — above fold, no FadeIn */}
       <section className="bg-white pb-16">
         <Container>
           <div className="grid lg:grid-cols-[55%_1fr] gap-12 lg:gap-16">
@@ -82,27 +82,13 @@ export default function ProductPage() {
       {/* Sticky tab nav */}
       <TabNav />
 
-      {/* Content sections */}
+      {/* Content sections — order: Overview → Specs → What's in the Box → Compatibility → LifestyleQuote → FAQ → Related */}
       <FadeIn><Overview /></FadeIn>
       <FadeIn><SpecsTable specs={product.specs} /></FadeIn>
       <FadeIn><WhatsIncluded /></FadeIn>
       <FadeIn><Compatibility /></FadeIn>
-
-      {/* FAQs */}
-      <FadeIn>
-        <section id="faqs" className="py-16 md:py-24 bg-cream scroll-mt-24">
-          <Container>
-            <h2 className="font-display font-bold text-charcoal text-[36px] md:text-[48px] leading-tight tracking-tight mb-10">
-              FAQs
-            </h2>
-            <div className="max-w-2xl">
-              <FAQs items={PRODUCT_FAQS} />
-            </div>
-          </Container>
-        </section>
-      </FadeIn>
-
       <FadeIn><LifestyleQuote /></FadeIn>
+      <FadeIn><ProductFAQs /></FadeIn>
       <FadeIn><RelatedContent /></FadeIn>
     </>
   )
